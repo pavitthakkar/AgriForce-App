@@ -1,0 +1,114 @@
+{
+  "name": "PlantLog",
+  "type": "object",
+  "properties": {
+    "farm_id": {
+      "type": "string",
+      "title": "Farm ID"
+    },
+    "module_id": {
+      "type": "string",
+      "title": "Module ID"
+    },
+    "date": {
+      "type": "string",
+      "title": "Date (YYYY-MM-DD)"
+    },
+    "health_status": {
+      "type": "string",
+      "enum": [
+        "poor",
+        "fair",
+        "good",
+        "excellent"
+      ],
+      "title": "Health Status"
+    },
+    "note": {
+      "type": "string",
+      "title": "Note"
+    },
+    "photo_url": {
+      "type": "string",
+      "title": "Photo URL"
+    },
+    "growth_stage": {
+      "type": "string",
+      "enum": [
+        "seedling",
+        "vegetative",
+        "flowering",
+        "fruiting",
+        "mature"
+      ],
+      "title": "Growth Stage"
+    },
+    "height_cm": {
+      "type": "number",
+      "title": "Height (cm)"
+    },
+    "width_cm": {
+      "type": "number",
+      "title": "Width (cm)"
+    },
+    "leaf_count": {
+      "type": "number",
+      "title": "Leaf Count"
+    }
+  },
+  "required": [
+    "farm_id",
+    "module_id",
+    "date"
+  ],
+  "rls": {
+    "create": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

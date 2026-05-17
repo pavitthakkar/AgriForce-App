@@ -1,0 +1,91 @@
+{
+  "name": "EnvironmentLog",
+  "type": "object",
+  "properties": {
+    "farm_id": {
+      "type": "string",
+      "title": "Farm ID"
+    },
+    "temperature_c": {
+      "type": "number",
+      "title": "Temperature (\u00b0C)"
+    },
+    "humidity_pct": {
+      "type": "number",
+      "title": "Humidity (%)"
+    },
+    "co2_ppm": {
+      "type": "number",
+      "title": "CO\u2082 (ppm)"
+    },
+    "light_intensity_lux": {
+      "type": "number",
+      "title": "Light Intensity (lux)"
+    },
+    "airflow_ms": {
+      "type": "number",
+      "title": "Airflow (m/s)"
+    },
+    "water_ph": {
+      "type": "number",
+      "title": "Water pH"
+    },
+    "note": {
+      "type": "string",
+      "title": "Note"
+    }
+  },
+  "required": [
+    "farm_id"
+  ],
+  "rls": {
+    "create": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

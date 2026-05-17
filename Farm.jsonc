@@ -1,0 +1,74 @@
+{
+  "name": "Farm",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Farm Name"
+    },
+    "farm_type": {
+      "type": "string",
+      "enum": [
+        "vertical_rack",
+        "tower",
+        "a_frame"
+      ],
+      "title": "Farm Type"
+    },
+    "canvas_data": {
+      "type": "string",
+      "title": "Canvas Data (JSON)"
+    },
+    "thumbnail": {
+      "type": "string",
+      "title": "Thumbnail URL"
+    },
+    "notes": {
+      "type": "string",
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "name",
+    "farm_type"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

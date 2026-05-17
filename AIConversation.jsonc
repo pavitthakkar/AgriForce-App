@@ -1,0 +1,77 @@
+{
+  "name": "AIConversation",
+  "type": "object",
+  "properties": {
+    "farm_id": {
+      "type": "string",
+      "title": "Farm ID"
+    },
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "messages": {
+      "type": "string",
+      "title": "Messages (JSON)"
+    },
+    "pinned": {
+      "type": "boolean",
+      "title": "Pinned"
+    }
+  },
+  "required": [
+    "farm_id",
+    "title",
+    "messages"
+  ],
+  "rls": {
+    "create": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}
