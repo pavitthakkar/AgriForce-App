@@ -1,10 +1,9 @@
 # 🌱 AgriForce — AI-Powered Vertical Farming Management Platform
 
-[License: MIT](https://opensource.org/licenses/MIT)
-[Platform: Base44](https://base44.com)
-[AI: Groq + Llama 4 Scout](https://groq.com)
-[Vector DB: FAISS](https://github.com/facebookresearch/faiss)
-[Deployed on: Hugging Face](https://huggingface.co)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![AI: Groq + Llama 4 Scout](https://img.shields.io/badge/AI-Groq%20%2B%20Llama%204%20Scout-blue)](https://groq.com)
+[![Vector DB: FAISS](https://img.shields.io/badge/Vector%20DB-FAISS-orange)](https://github.com/facebookresearch/faiss)
+[![Deployed on: Hugging Face](https://img.shields.io/badge/Deployed%20on-Hugging%20Face-yellow)](https://huggingface.co/spaces/Pavsts/agriforce-rag-system)
 
 AgriForce is a free, open-source vertical farming management platform that empowers farmers, students, researchers, and urban agriculture enthusiasts to design, monitor, and optimize their vertical farms using AI.
 
@@ -163,4 +162,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ---
 
-*Built with 🌱 for a more sustainable food future*
+*Built by Pavit Thakkar and Yash Gupta with 🌱 for a more sustainable food future*
