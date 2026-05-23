@@ -107,14 +107,14 @@ AgriForce's RAG backend is deployed on **Hugging Face Spaces** using Docker: htt
 
 ## 📊 Training Data Sources
 
-| Dataset | Source | License |
-|---|---|---|
-| Vertical Farm Cultivation Guidelines | WUR (Wageningen University) | CC BY |
-| OpenFarm Crop Data | OpenFarm API | CC BY-SA |
-| Hydroponic IoT Data | Kaggle | Open |
-| Smart Farming Data 2024 | Kaggle | Open |
-| USDA Plant Data | USDA | Public Domain |
-| Custom Knowledge Base | AgriForce Team | MIT |
+| Dataset | Source | License | Notes |
+|---|---|---|---|
+| OpenFarm Crop Database | [OpenFarm](https://github.com/openfarmcc/OpenFarm) | CC0 Public Domain | 5,000 crop records used |
+| Crop Recommendation Dataset | [Kaggle](https://kaggle.com) | CC0 Public Domain | Soil + climate crop data |
+| Smart Farming Sensor Data 2024 | [Kaggle](https://kaggle.com/datasets/atharvasoundankar/smart-farming-sensor-data-for-yield-prediction) | Apache 2.0 | Yield prediction sensor data |
+| Hydroponic IoT Data | [Kaggle](https://kaggle.com) | CC0 Public Domain | Cleaned interpolated sensor readings |
+| USDA PLANTS Database | [USDA](https://plants.sc.egov.usda.gov) | U.S. Public Domain | Complete plant checklist |
+| Custom Knowledge Base | AgriForce Team | MIT | Lighting, nutrients, diseases, vertical farming basics, AgriForce description |
 
 ---
 
